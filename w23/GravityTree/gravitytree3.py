@@ -16,13 +16,20 @@ for line in inputA:
     ins.append(line)
 
 
-print ins
 
-
-
-
-q, = map(int , ins[0].strip().split())
-index=1
-for i in range(q):
-	n,= map(int , ins[index+i].strip().split())
-
+	
+#[level, parent-list]
+n, = map(int , ins[0].strip().split())
+ls = map(int , ins[1].strip().split())
+dic={}
+vt=[1]
+pl=[0]*(n+1)
+for i in range(n+1):
+	pl[i]=[]
+for i in range(n-1):
+	t=ls[i]
+	pl[t].append(i+2)
+print pl
+for i in range(n+1):
+	for j in pl[i]:
+		

@@ -1,3 +1,4 @@
+#https://www.hackerrank.com/challenges/fibonacci-modified
 filename = "input/input00.txt"
 f=open(filename,'r')
 
@@ -16,13 +17,11 @@ for line in inputA:
     ins.append(line)
 
 
-print ins
+def fibonacci(t0,t1):
+	t2=t0+t1**2
+	return (t1,t2)
 
-
-
-
-q, = map(int , ins[0].strip().split())
-index=1
-for i in range(q):
-	n,= map(int , ins[index+i].strip().split())
-
+t0,t1,n = map(int , ins[0].strip().split())
+for i in range(n-2):
+	t0,t1=fibonacci(t0,t1)
+print t1

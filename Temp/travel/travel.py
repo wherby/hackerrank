@@ -15,14 +15,20 @@ ins=[]
 for line in inputA:
     ins.append(line)
 
-
-print ins
-
-
-
-
-q, = map(int , ins[0].strip().split())
+q,m = map(int , ins[0].strip().split())
 index=1
+LS=[]
 for i in range(q):
-	n,= map(int , ins[index+i].strip().split())
+	T1= map(int , ins[index+i].strip().split())
+	LS.append(T1)
 
+
+re=[]
+for i in range(m):
+	s=[]
+	for j in range(q):
+		s.append(LS[j][i])
+	s=sorted(s)
+	a=s[(q-1)/2]
+	re.append(str(a))
+print " ".join(re)
