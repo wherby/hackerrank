@@ -1,4 +1,4 @@
-filename = "input00.txt"
+filename = "input/input00.txt"
 f=open(filename,'r')
 
 # Enter your code here. Read input from STDIN. Print output to STDOUT
@@ -17,3 +17,10 @@ for line in inputA:
 
 
 print ins
+
+q, = map(int , ins[0].strip().split())
+index =1
+
+
+for i in range(q):
+	pass
