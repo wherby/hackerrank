@@ -25,9 +25,8 @@ def getLastRepeat(rps,fstr,st):
 	for i in range(1,rpn+1):
 		crps=rps[0:i]
 		lst="".join(crps)
-		cn=st.split(lst)
-		rcn= ''.join(cn)
-		if (len(cn)-1) *i ==rpn and len(rcn)==0:
+		cn=st.split(lst) 
+		if (len(cn)-1) *i ==rpn and len(''.join(cn))==0:
 			break
 	return lst
 
