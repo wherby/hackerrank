@@ -25,4 +25,3 @@ q, = map(int , ins[0].strip().split())
 index=1
 for i in range(q):
 	n,= map(int , ins[index+i].strip().split())
-
