@@ -2,7 +2,6 @@ filename = "input/input00.txt"
 f=open(filename,'r')
 
 # Enter your code here. Read input from STDIN. Print output to STDOUT
-# Enter your code here. Read input from STDIN. Print output to STDOUT
 import math
 import sys
 
@@ -20,20 +19,61 @@ Map1=[]
 cn=0
 for i in range(9):
 	for j in range(i+1,9):
-		t1 = [0]*9
+		t1 = [0]*12
 		t1[i]=1
 		t1[j]=1
-		t1=map(str,t1)
-		t2="".join(t1)
-		Map1.append(t2)
+		if i <3 and j <3:
+			t1[9]=1
+			t1[10]=1
+			t1=map(str,t1)
+			t2="".join(t1)
+			Map1.append(t2)
+			t1[9]=0
+			t1[10]=1
+			t1[11]=1
+			t1=map(int,t1)
+			t1=map(str,t1)
+			t2="".join(t1)
+			Map1.append(t2)
+			t1[9]=1
+			t1[10]=0
+			t1[11]=1
+			t1=map(int,t1)
+			t1=map(str,t1)
+			t2="".join(t1)
+			Map1.append(t2)
+		if i >5 and j >5:
+			t1=map(str,t1)
+			t2="".join(t1)
+			Map1.append(t2)
+		if (i <3 and j > 3) or (i>3 and j <3):
+			t1[9]=1
+			t1=map(str,t1)
+			t2="".join(t1)
+			Map1.append(t2)
+			t1=map(int,t1)
+			
+			t1[9]=0
+			t1[10]=1
+			t1=map(str,t1)
+			t2="".join(t1)
+			Map1.append(t2)
+			t1=map(int,t1)
+			t1[10]=0
+			t1[11]=1
+			t1=map(str,t1)
+			t2="".join(t1)
+			Map1.append(t2)
+print len(Map1)
+
 # print Map1
 trans={}
 Rtrans={}
 for i in Map1:
 	stat= i[:6]
-	tras1=i
+	tras1=i[3:9]
 	stat2 = i[::3] +i[1::3]
-	tras2 = i[::3] +i[1::3] +i[2::3]
+	tras2 = i[1::3] +i[2::3]
 	if stat not in trans:
 		trans[stat] = [tras1]
 	else:
@@ -57,16 +97,8 @@ def getNum(m,n,dic2,dic3):
 					tdic[tr] = v 
 				else:
 					tdic[tr] = v + tdic[tr]
-		ttdic={}
-		for k,v in tdic.items():
-			k1=k[3:]
-			ttdic[k1] =v
-		dic2 =ttdic
+		dic2 =tdic
 		m = m -1
-	dic3 ={}
-	for k,v in tdic.items():
-		k1 =k[1::3] +k[2::3]
-		dic3[k1] =v
 	while n!=0:
 		tdic={}
 		for k,v in dic3.items():
@@ -78,11 +110,14 @@ def getNum(m,n,dic2,dic3):
 					tdic[tr] = v + tdic[tr]
 		dic3 =tdic
 		n = n -1
-
+	# print dic2
+	rs=0
+	for k,v in dic2.items():
+		rs = rs +v
 	rs1=0
 	for k,v in dic3.items():
 		rs1 = rs1 +v
-	return rs1
+	return rs *rs1
 
 
 
@@ -99,5 +134,4 @@ for i in range(q):
 		dic3={x[1::3] +x[2::3] :1}
 		t1= getNum(m-3,n-3,dic2,dic2)
 		re.append(t1)
-	print re
 	print sum(re)
