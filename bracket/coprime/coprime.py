@@ -54,17 +54,7 @@ def getLeveUpCombine(pl):
 	global ls,dic1,ed
 	re=[]
 	minX= ed
-	tp =set(pl[0])
-	for i in ls:
-		if i not in tp:
-			t1 = multALl(pl[1],i)
-			if t1<minX:
-				minX=t1
-			if t1 not in dic1 and t1 <=ed:
-				t2=pl[0][:]+[i]
-				re.append([t2,t1])
-				dic1[t1] =1
-	return (re,minX)
+
 
 def getValue(pl,n):
 	global expon,ed,CONSTPRIME
@@ -81,7 +71,32 @@ def getValue(pl,n):
 			res = res 
 	return res %CONSTPRIME
 
+>>>>>>> 23b6d1440accba432cf86df0d2b7726d0437fe86
 
+def getAllCombine(pl):
+	global ls,dic1,ed
+	n = len(ls)
+	rex=0
+	for i in range(n):
+		re =[]
+		minxLeve=ed +1
+		for p1 in pl:
+			re1,minX =getLeveUpCombine(p1)
+			if minxLeve >minX:
+				minxLeve = minX
+			if minX > ed:
+				continue
+			re.extend(re1)
+		if minxLeve > ed:
+			break
+		#print re
+		pl = re
+		v1 =getValue(pl,i+1)
+		rex =rex +v1
+		#print v1
+	return rex
+
+<<<<<<< HEAD
 def getAllCombine(pl):
 	global ls,dic1,ed
 	n = len(ls)
@@ -106,6 +121,8 @@ def getAllCombine(pl):
 		#print v1
 	return rex
 
+=======
+>>>>>>> 23b6d1440accba432cf86df0d2b7726d0437fe86
 
 
 
@@ -119,5 +136,9 @@ for i in range(q):
 	#print mx1
 	ls= map(int , ins[index+i*2 +1].strip().split())
 	a1=getAllCombine([[[],1]])  %CONSTPRIME
+<<<<<<< HEAD
 	print (mx1- a1 + CONSTPRIME)% CONSTPRIME
 
+=======
+	print (mx1- a1 + CONSTPRIME)% CONSTPRIME
+>>>>>>> 23b6d1440accba432cf86df0d2b7726d0437fe86
