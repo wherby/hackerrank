@@ -20,6 +20,7 @@ print ins
 
 
 
+
 q, = map(int , ins[0].strip().split())
 index=1
 for i in range(q):
