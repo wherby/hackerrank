@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 filename = "input/input02.txt"
 f=open(filename,'r')
 
@@ -154,3 +156,4 @@ for i in range(q):
 	plist= pps[b]
 	getWeight(plist,a)
 >>>>>>> ec644675791d7377bf17319ab4f3e34c7bc986b4
+>>>>>>> aac2afda152ae9243387d624d066b31bba540f26

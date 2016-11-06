@@ -15,7 +15,6 @@ ins=[]
 for line in inputA:
     ins.append(line)
 
-
 def getN(a,b,c):
 	if c ==0:
 		return 0

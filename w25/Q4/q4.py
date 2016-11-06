@@ -2,6 +2,7 @@ filename = "input/input00.txt"
 f=open(filename,'r')
 
 # Enter your code here. Read input from STDIN. Print output to STDOUT
+
 import math
 import sys
 
@@ -102,6 +103,6 @@ re = getANS(ls,n)
 if re == 1 :
 	print "First"
 else:
-	print "Second"
 
+	print "Second"
 
