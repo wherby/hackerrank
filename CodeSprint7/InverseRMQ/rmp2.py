@@ -116,7 +116,7 @@ def formLowerLevel2(dic,q):
 				idex1=levelStart + i*2 +1
 				# print keys2, idex1
 				# print RMQ
-				while keys2[j] < RMQ[idex1]:
+				while keys2[j] < RMQ[idex1] :
 					print keys2[j] ,RMQ[idex1]
 					j=j+1
 

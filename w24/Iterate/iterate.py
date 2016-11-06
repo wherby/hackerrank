@@ -1,4 +1,4 @@
-filename = "input/input00.txt"
+filename = "input/input01.txt"
 f=open(filename,'r')
 
 # Enter your code here. Read input from STDIN. Print output to STDOUT
@@ -46,6 +46,7 @@ def step(ls):
 	if g1 !=1:
 		for i in range(m):
 			re[i] = re[i] / g1
+	print re
 	return re
 
 

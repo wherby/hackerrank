@@ -1,2 +1,2 @@
-abc
-6
+abcabcabcabc
+24
