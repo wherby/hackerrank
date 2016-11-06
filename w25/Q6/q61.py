@@ -39,18 +39,13 @@ def partitian(ls,grap):
 	for i in range(1,n):
 		t = ls[i]-1
 		grapPart[t][i] =1
-
-#generate children map
-def getListDic(lstDic,grap):
-	for s1,e1 in grap:
-		lstDic[s1][s1]=1
-		lstDic[s1][e1]=1
-		lstDic[e1][e1]=1
-		for dc1 in lstDic:
-			if s1 in dc1:
-				dc1[e1]=1
-
-
+		
+def getPartialNumber(px):
+	global grapPart
+	pn =len(grapPart)
+	for i in range(pn):
+		if px in grapPart[i]:
+			return i
 
 n,m,q = map(int , ins[0].strip().split())
 ls= [0]*(n+1)
@@ -67,20 +62,15 @@ for i in range(m):
 grap=sorted(grap,key = lambda x: x[0])
 
 partitian(ls,grap)
-getListDic(lstDic,grap)
+
 # print ls
 # print grap
-# print grapPart
+print grapPart
 #print lstDic
 index = index +m
 cmdLst=[]
 pn = len(grapPart)
-def getPartialNumber(px):
-	global grapPart
-	pn =len(grapPart)
-	for i in range(pn):
-		if px in grapPart[i]:
-			return i
+
 
 def printPxOnCmdHistory(cmdList,px):
 	global lstDic
