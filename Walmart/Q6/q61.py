@@ -1,4 +1,4 @@
-filename = "input/input11.txt"
+filename = "input/input00.txt"
 f=open(filename,'r')
 
 # Enter your code here. Read input from STDIN. Print output to STDOUT
