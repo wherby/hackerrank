@@ -68,8 +68,9 @@ def leftOrRight(ordlst, dic1,d ,index):
 def getMin(ordlst,dic1,d, va):
 	global MinLst
 	if len(dic1) == 1:
-
-		return 0	fv cv 
+		for k,v in dic1.items():
+			if v == 1:
+				return 0	
 	if len(ordlst) == 1:
 		return d
  	n = len(ordlst)

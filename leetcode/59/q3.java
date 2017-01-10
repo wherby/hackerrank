@@ -34,5 +34,7 @@ class Solution {
             dp[start][end] = (int)(ans%div);
             return dp[start][end];
     }
-    
+    public static void main(String[] args){
+        
+    }
 }
