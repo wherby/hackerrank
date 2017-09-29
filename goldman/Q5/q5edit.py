@@ -60,7 +60,7 @@ for i in xrange(n):
         else:
             assert_range(rate, MINV, MAXV)
             rates[i][j] = create_data(rate)
-
+#print rates
 def comb(a, b):
     c = [[None for _ in xrange(n)] for _ in xrange(n)]
     for i in xrange(n):
@@ -90,3 +90,4 @@ for i, p in enumerate(POWERS):
     x *= pow(p, res[i], MOD)
     x %= MOD
 print x
+#print mat
