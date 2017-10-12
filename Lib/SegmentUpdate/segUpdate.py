@@ -35,7 +35,7 @@ def updateSeg(a,b,x,sgs):
 
 
 #Segment update for array
-
+#rangeUpdate range array
 
 sgs=[[1,100,0]]
 ups=[[1,50,20],[20,51,39],[50,70,100],[20,100,230]]
