@@ -34,9 +34,15 @@ class Solution {
             dp[start][end] = (int)(ans%div);
             return dp[start][end];
     }
+<<<<<<< HEAD
+    public static void main(String[] args){
+        
+    }
+=======
     
 
       public static void main(String args[]) { 
         System.out.println("Hello World!"); 
     } 
+>>>>>>> b9231b9ddf7d99a1fd6603824f698bd7fa9967ce
 }
