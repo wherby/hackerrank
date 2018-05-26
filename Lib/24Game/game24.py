@@ -16,6 +16,7 @@ class Solution(object):
                             if self.judgePoint24(B): 
                                 return True
                             B.pop()
+                            
         return False
 
 
