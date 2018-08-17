@@ -4,3 +4,5 @@ D:\我的文档\Visual Studio 2010\Projects\ThermoMeter\ThermoMeter\bin\Debug\Th
 D:\我的文档\Visual Studio 2010\Projects\ThermoMeter\ThermoMeter\obj\x86\Debug\ThermoMeter.csprojResolveAssemblyReference.cache
 D:\我的文档\Visual Studio 2010\Projects\ThermoMeter\ThermoMeter\obj\x86\Debug\ThermoMeter.exe
 D:\我的文档\Visual Studio 2010\Projects\ThermoMeter\ThermoMeter\obj\x86\Debug\ThermoMeter.pdb
+C:\Users\where\Documents\github\hackerrank\EA\ThermoMeter\ThermoMeter\obj\x86\Debug\ThermoMeter.exe
+C:\Users\where\Documents\github\hackerrank\EA\ThermoMeter\ThermoMeter\obj\x86\Debug\ThermoMeter.pdb
