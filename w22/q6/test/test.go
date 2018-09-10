@@ -1,4 +1,4 @@
-package main
+package test
 
 import ("fmt"
 	"os"
@@ -86,7 +86,7 @@ func(array *PersistentArray) upd(v *Tree,l int,r int, at int, val int) *Tree{
 // }
 
 func main() {
-	file,_:= os.Open("./input/input01.txt")
+	file,_:= os.Open("../input/input01.txt")
 
 	defer file.Close()
 
