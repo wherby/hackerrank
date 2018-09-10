@@ -86,7 +86,7 @@ func(array *PersistentArray) upd(v *Tree,l int,r int, at int, val int) *Tree{
 // }
 
 func main() {
-	file,_:= os.Open("./input/input23.txt")
+	file,_:= os.Open("./input/input00.txt")
 
 	defer file.Close()
 
@@ -121,7 +121,7 @@ func main() {
 			}else{
 				j:=ans[m-1]
 				version[m] = array.upd(version[j],L,R,x,m+1)
-				ans[m] = array.get(version[j],L,R,x) 
+				ans[m] = array.get(version[j],L,R,x) 			
 			}
 			m++
 		}
