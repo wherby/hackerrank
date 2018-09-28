@@ -25,13 +25,15 @@ object PersistentArray{
     }
 }
  
-class Node(valueV: Int,leftV: Node, rightV: Node){
-    var value = valueV
-    var left = leftV
-    var right = rightV
-}
+
 
 class PersistentArray( pool: Array[Node], L: Int, R: Int){
+    class Node(valueV: Int,leftV: Node, rightV: Node){
+        var value = valueV
+        var left = leftV
+        var right = rightV
+    }
+    
     var lastUsed = -1 //to kept the new node from 0
     def GetNewNode():Node={
         lastUsed = lastUsed +1 
@@ -74,5 +76,4 @@ class PersistentArray( pool: Array[Node], L: Int, R: Int){
         }
         res
     }
-
 }
