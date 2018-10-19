@@ -1,5 +1,5 @@
 # Global Minimum Cut algorithm(Stoer-Wagner or Karger)
-#https://www.hackerrank.com/contests/w37/challenges/two-efficient-teams/editorial
+# https://www.hackerrank.com/contests/w37/challenges/two-efficient-teams/editorial
 
 def addEdge(a,b,value):
     global g
@@ -27,6 +27,7 @@ def miniCut(g):
                     if used[u] == True or dist[v] > dist[u]:
                         u =v
             used[u] = True
+            #Updated the weight
             for v in vertices:
                 if used[v] == False:
                     dist[v] = dist[v] + g[u][v]
@@ -38,6 +39,7 @@ def miniCut(g):
         vertices.remove(t)
         for v in vertices:
             addEdge(u,v, g[v][t])
+        #print g
     return minCutValue
 
 
