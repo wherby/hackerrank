@@ -19,7 +19,6 @@ for line in inputA:
 ####Convex hull
 #https://blog.csdn.net/anakin7/article/details/53822429
 #https://wcipeg.com/wiki/Convex_hull_trick
-#https://www.hackerrank.com/contests/w30/challenges/poles/editorial
 #####
 
 class Line():
@@ -56,8 +55,6 @@ def query(x,lines):
         lines.popleft()
     return lines[0].get(x)
 
-##########
-
 MAXN = 5000
 
 weight =[0] *(MAXN+5)
@@ -69,7 +66,7 @@ F = [0] *(MAXN+5)
 dp = [[0 for i in range(2)] for j in range(MAXN)]
 
 lines = deque()
-
+##########
 num,K= map(int , ins[0].strip().split())
 index=1
 

@@ -1,10 +1,10 @@
 filename = "input/input01.txt"
 f=open(filename,'r')
 
+
 # Enter your code here. Read input from STDIN. Print output to STDOUT
 import math
 import sys
-from collections import deque
 
 if  "f" in locals():
     inputA=f
@@ -53,7 +53,7 @@ def query(x,lines):
     if len(lines) ==0:
         return 0
     while len(lines) > 1 and lines[0].get(x) > lines[1].get(x):
-        lines.popleft()
+        lines = lines[1:]
     return lines[0].get(x)
 
 ##########
@@ -68,7 +68,7 @@ F = [0] *(MAXN+5)
 
 dp = [[0 for i in range(2)] for j in range(MAXN)]
 
-lines = deque()
+lines = []
 
 num,K= map(int , ins[0].strip().split())
 index=1
@@ -86,7 +86,7 @@ for i in range(num):
     F[i]= dp[i][1]= B[i] -pos[i] *A[i]
 
 for k in range(2,K+1):
-    lines.clear()
+    lines=[]
     l = Line(A[k-2],dp[k-2][(k-1) & 1] -B[k-2])
     insert(l,lines)
 
@@ -98,5 +98,3 @@ for k in range(2,K+1):
         l = Line(A[x],dp[x][(k-1) & 1] -B[x])
         insert(l,lines)
 print dp[num-1][K&1]
-
-    
