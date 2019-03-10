@@ -1,4 +1,5 @@
 {
-    "go.gopath": "C:/Users/where/go/pkg/windows_amd64"
+    "go.gopath": "C:/Users/where/go/pkg/windows_amd64",
+    "python.linting.pylintEnabled": true
       
 }
