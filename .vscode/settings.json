@@ -1,5 +1,8 @@
 {
     "go.gopath": "C:/Users/where/go/pkg/windows_amd64",
-    "python.linting.pylintEnabled": true
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true,
+    "python.pythonPath": "C:\\Python27\\python.exe"
       
 }
